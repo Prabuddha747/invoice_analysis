@@ -70,7 +70,7 @@ if uploaded_files:
     for uploaded_file in uploaded_files:
         # Load and display each image
         image = Image.open(uploaded_file)
-        st.image(image, caption=f"📸 Uploaded: {uploaded_file.name}", use_column_width=True)
+        st.image(image, caption=f"📸 Uploaded: {uploaded_file.name}", use_container_width=True)
 
         # Generate a unique ID for each invoice
         invoice_id = generate_invoice_id(image)
