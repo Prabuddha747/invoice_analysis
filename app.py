@@ -8,7 +8,7 @@ import pickle
 from PIL import Image
 import io
 import hashlib
-
+import os  
 # Get API Key from Streamlit secrets
 LLM_call = st.secrets.get("LLM_call")  # Using .get to avoid errors if key is missing
 if not LLM_call:
