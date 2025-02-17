@@ -15,10 +15,9 @@ import hashlib
 load_dotenv()
 
 # Get API Key
-LLM_call = os.getenv("LLM_call")
+LLM_call = st.secrets["LLM_call"]
 if not LLM_call:
-    st.error("Please configure your .env file.")
-genai.configure(api_key=LLM_call)
+    st.error("API key not found. Please configure your secrets.")
 
 # Function to get response from Gemini AI
 def get_gemini_response(image, prompt):
